@@ -23,3 +23,19 @@ sudo apt install gcc build-essential libssl-dev libffi-dev xml2 -y
 sudo apt-get -y install python3-pip
 
 ```
+
+# Other interesting notes
+
+##Problem linking Kibana
+
+```bash
+#Once Kibana is running, you can use the following instructions to create index pattern:
+
+curl -f -XPOST -H "Content-Type: application/json" -H "kbn-xsrf: anything" \
+          "http://127.0.0.1:5601/api/saved_objects/index-pattern/logstash-*" \
+          -d"{\"attributes\":{\"title\":\"logstash-*\",\"timeFieldName\":\"@timestamp\"}}"
+
+curl -XPOST -H "Content-Type: application/json" -H "kbn-xsrf: anything" \
+          "http://127.0.0.1:5601/api/kibana/settings/defaultIndex" \
+          -d"{\"value\":\"logstash-*\"}"
+```
