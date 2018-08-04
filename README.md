@@ -24,7 +24,7 @@ sudo apt-get -y install python3-pip
 
 ```
 
-# Other interesting notes
+# Other interesting notes & Utilities
 
 ## Problems linking Kibana
 
@@ -39,3 +39,26 @@ curl -XPOST -H "Content-Type: application/json" -H "kbn-xsrf: anything" \
           "http://127.0.0.1:5601/api/kibana/settings/defaultIndex" \
           -d"{\"value\":\"logstash-*\"}"
 ```
+
+## SSH Tunnel
+In order to reach services in a vitual machine/container within a host, it's easier to creare an SSH tunnel. Doing so you will achieve the possibility to access the services from your localhost, for instance from your browser. 
+
+```bash
+sudo ssh -f USER@JUMP_SERVER -L LOCALHOST_PORT:TARGET:TARGET_PORT -N
+```
+-f allows to put the process in background
+-N says that no commands have to be executed right now
+
+As following it is shown how to check the SSH Tunnel/SSH connection avaliable at this time.
+```bash
+sudo lsof -i -n | egrep '\<ssh\>'
+```
+
+## Sudoers file editing
+
+Change the /etc/sudoers.d/... file as following: 
+
+```bash
+user ALL=(ALL) NOPASSWD:ALL
+```
+this procedure grants the execution of all "sudo" commands without password for a given user.
