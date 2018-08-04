@@ -6,7 +6,7 @@ As usual follow the primary instructions from [OSM4 official installation guide]
 
 .....
 
-#Troubleshooting
+# Troubleshooting
 
 In case of error during the installation process, please try to install at the beginning the following packages (on the host of OSM):
 
