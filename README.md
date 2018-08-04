@@ -4,15 +4,14 @@ As usual follow the primary instructions from [OSM4 official installation guide]
 
 [OSM4 official installation guide]: https://osm.etsi.org/wikipub/index.php/OSM_Release_FOUR#Other_installation_options
 
-.....
 
 # Troubleshooting
 
 In case of error during the installation process, please try to install at the beginning the following packages (on the host of OSM):
 
-1. gcc
-2. pip3
-3. build-essential libssl-dev libffi-dev (xml2)
+* gcc
+* pip3
+* build-essential libssl-dev libffi-dev (xml2)
 
 How to:
 
