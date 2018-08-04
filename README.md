@@ -26,7 +26,7 @@ sudo apt-get -y install python3-pip
 
 # Other interesting notes
 
-##Problem linking Kibana
+## Problem linking Kibana
 
 ```bash
 #Once Kibana is running, you can use the following instructions to create index pattern:
