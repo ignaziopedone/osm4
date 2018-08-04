@@ -56,7 +56,7 @@ sudo lsof -i -n | egrep '\<ssh\>'
 
 ## Sudoers file editing
 
-Change the /etc/sudoers.d/... file as following: 
+Change the `/etc/sudoers.d/...` file as following: 
 
 ```bash
 user ALL=(ALL) NOPASSWD:ALL
