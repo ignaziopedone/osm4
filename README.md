@@ -39,7 +39,6 @@ curl -XPOST -H "Content-Type: application/json" -H "kbn-xsrf: anything" \
           "http://127.0.0.1:5601/api/kibana/settings/defaultIndex" \
           -d"{\"value\":\"logstash-*\"}"
 ```
-ciao
 
 
 ## SSH Tunnel
